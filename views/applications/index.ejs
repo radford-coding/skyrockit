@@ -8,7 +8,21 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>yo apps</h1>
+    <br><br>
+    <table style="border: 1px solid black;">
+        <thead>
+            <th>title</th>
+            <th>company</th>
+        </thead>
+        <% applications.forEach(app => { %>
+            <tr>
+                <!-- needs href to the show page -->
+                <td><a href="/"><%= app.title %></a></td>
+                <td><%= app.company %></td>
+            </tr>
+            <% }); %>
+        </table>
+        <br><br>
     <a href="/users/<%= user._id %>/applications/new">Add an application</a>
-    
-</body>
+    </body>
 </html>
