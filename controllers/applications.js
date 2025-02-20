@@ -13,4 +13,9 @@ router.get('/', (req, res) => {
     };
 });
 
+// GET /users/:userId/applications/new
+router.get('/new', (req, res) => {
+    res.render('applications/new.ejs');
+});
+
 module.exports = router;
