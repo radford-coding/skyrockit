@@ -16,8 +16,7 @@
         </thead>
         <% applications.forEach(app => { %>
             <tr>
-                <!-- needs href to the show page -->
-                <td><a href="/"><%= app.title %></a></td>
+                <td><a href="/users/<%= user._id %>/applications/<%= app._id %>"><%= app.title %></a></td>
                 <td><%= app.company %></td>
             </tr>
             <% }); %>
